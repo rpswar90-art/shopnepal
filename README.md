@@ -1,2 +1,0 @@
-# shopnepal
-,hjjsgfbhdfgbfehdsgf
