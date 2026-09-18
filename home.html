@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopNepal - Home</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: #f2f4f8;
+        color: #333;
+    }
+
+    /* HEADER */
+    header {
+        background: #ffffff;
+        padding: 18px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .logo {
+        font-size: 28px;
+        font-weight: bold;
+        color: #0066ff;
+    }
+
+    nav a {
+        margin: 0 18px;
+        text-decoration: none;
+        color: #444;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #0066ff;
+    }
+
+    .search-cart input {
+        padding: 10px 15px;
+        border-radius: 25px;
+        border: 1px solid #ccc;
+        margin-right: 15px;
+        width: 200px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+        background: url('https://cdn.pixabay.com/photo/2016/11/29/09/32/shopping-1866163_1280.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        padding: 20px;
+        position: relative;
+    }
+
+    .hero::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.45);
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+
+    .hero p {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .hero button {
+        padding: 14px 30px;
+        background: #0066ff;
+        border: none;
+        border-radius: 30px;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .hero button:hover {
+        background: #004ecc;
+    }
+
+    /* ABOUT SECTION */
+    .about {
+        padding: 60px 50px;
+        text-align: center;
+    }
+
+    .about h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #222;
+    }
+
+    .about p {
+        font-size: 18px;
+        max-width: 900px;
+        margin: auto;
+        line-height: 1.7;
+        color: #555;
+    }
+
+    /* WHY CHOOSE US */
+    .why {
+        padding: 60px 50px;
+        background: #ffffff;
+        text-align: center;
+    }
+
+    .why h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+        color: #222;
+    }
+
+    .why-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        margin-top: 20px;
+    }
+
+    .why-card {
+        background: #f9fafc;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .why-card:hover {
+        transform: translateY(-6px);
+    }
+
+    .why-card h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: #0066ff;
+    }
+
+    .why-card p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    /* SERVICES */
+    .services {
+        padding: 60px 50px;
+        text-align: center;
+    }
+
+    .services h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+        color: #222;
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .service-card {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+        transition: 0.3s;
+    }
+
+    .service-card:hover {
+        transform: translateY(-6px);
+    }
+
+    .service-card h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: #0066ff;
+    }
+
+    .service-card p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    /* FOOTER */
+    footer {
+        background: #1f1f1f;
+        color: white;
+        padding: 35px;
+        text-align: center;
+        margin-top: 40px;
+        font-size: 16px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 992px) {
+        .why-grid, .service-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .why-grid, .service-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .hero h1 { font-size: 34px; }
+        .hero p { font-size: 18px; }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">ShopNepal</div>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="categories.html">Categories</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="search-cart">
+        <input type="text" placeholder="Search products...">
+        🛒
+    </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-content">
+        <h1>Welcome to ShopNepal</h1>
+        <p>Your trusted online shopping destination in Nepal.</p>
+        <button>Explore More</button>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+    <h2>About ShopNepal</h2>
+    <p>
+        ShopNepal is a modern online shopping platform designed to bring quality products,
+        fast delivery, and a smooth shopping experience to customers across Nepal.
+        We focus on reliability, affordability, and customer satisfaction.
+    </p>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why">
+    <h2>Why Choose Us?</h2>
+    <div class="why-grid">
+
+        <div class="why-card">
+            <h3>Fast Delivery</h3>
+            <p>We deliver products quickly and safely to your doorstep anywhere in Nepal.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>Affordable Prices</h3>
+            <p>We offer competitive pricing and regular discounts to make shopping easier.</p>
+        </div>
+
+        <div class="why-card">
+            <h3>Trusted Service</h3>
+            <p>Thousands of customers trust ShopNepal for quality and reliability.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services">
+    <h2>Our Services</h2>
+    <div class="service-grid">
+
+        <div class="service-card">
+            <h3>Customer Support</h3>
+            <p>Our support team is available 7 days a week to assist you with any issues.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Secure Payment</h3>
+            <p>We provide safe and secure payment options for a worry-free shopping experience.</p>
+        </div>
+
+        <div class="service-card">
+            <h3>Easy Returns</h3>
+            <p>If you're not satisfied, you can easily return or replace your product.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 ShopNepal — All Rights Reserved
+</footer>
+
+</body>
+</html>

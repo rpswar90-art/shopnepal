@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ShopNepal - About Us</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: #f2f4f8;
+        color: #333;
+    }
+
+    /* HEADER */
+    header {
+        background: #ffffff;
+        padding: 18px 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .logo {
+        font-size: 28px;
+        font-weight: bold;
+        color: #0066ff;
+    }
+
+    nav a {
+        margin: 0 18px;
+        text-decoration: none;
+        color: #444;
+        font-weight: 600;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: #0066ff;
+    }
+
+    /* BANNER */
+    .banner {
+        background: url('https://cdn.pixabay.com/photo/2016/11/29/09/32/shopping-1866163_1280.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        position: relative;
+    }
+
+    .banner::after {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background: rgba(0,0,0,0.45);
+    }
+
+    .banner h1 {
+        position: relative;
+        z-index: 2;
+        font-size: 48px;
+        font-weight: 700;
+    }
+
+    /* ABOUT SECTION */
+    .about {
+        padding: 60px 50px;
+        text-align: center;
+    }
+
+    .about h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #222;
+    }
+
+    .about p {
+        font-size: 18px;
+        max-width: 900px;
+        margin: auto;
+        line-height: 1.7;
+        color: #555;
+    }
+
+    /* MISSION & VISION */
+    .mission {
+        padding: 60px 50px;
+        background: #ffffff;
+        text-align: center;
+    }
+
+    .mission h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+        color: #222;
+    }
+
+    .mission-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .mission-card {
+        background: #f9fafc;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    }
+
+    .mission-card h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #0066ff;
+    }
+
+    .mission-card p {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+    }
+
+    /* OUR STORY */
+    .story {
+        padding: 60px 50px;
+        text-align: center;
+    }
+
+    .story h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #222;
+    }
+
+    .story p {
+        font-size: 18px;
+        max-width: 900px;
+        margin: auto;
+        line-height: 1.7;
+        color: #555;
+    }
+
+    /* TEAM SECTION */
+    .team {
+        padding: 60px 50px;
+        background: #ffffff;
+        text-align: center;
+    }
+
+    .team h2 {
+        font-size: 36px;
+        margin-bottom: 30px;
+        color: #222;
+    }
+
+    .team-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .team-card {
+        background: #f9fafc;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    }
+
+    .team-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .team-card h3 {
+        margin-top: 12px;
+        font-size: 22px;
+        color: #0066ff;
+    }
+
+    .team-card p {
+        font-size: 16px;
+        color: #555;
+    }
+
+    /* FOOTER */
+    footer {
+        background: #1f1f1f;
+        color: white;
+        padding: 35px;
+        text-align: center;
+        margin-top: 40px;
+        font-size: 16px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 992px) {
+        .mission-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .team-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .team-grid {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .banner h1 { font-size: 32px; }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">ShopNepal</div>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="categories.html">Categories</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- BANNER -->
+<div class="banner">
+    <h1>About Us</h1>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+    <h2>Who We Are</h2>
+    <p>
+        ShopNepal is Nepal’s modern online shopping platform built to provide a fast,
+        reliable, and enjoyable shopping experience. We aim to bring quality products,
+        affordable prices, and excellent customer service to every customer across Nepal.
+    </p>
+</section>
+
+<!-- MISSION & VISION -->
+<section class="mission">
+    <h2>Our Mission & Vision</h2>
+
+    <div class="mission-grid">
+
+        <div class="mission-card">
+            <h3>Our Mission</h3>
+            <p>
+                To make online shopping simple, accessible, and trustworthy for everyone in Nepal.
+                We focus on quality, affordability, and customer satisfaction.
+            </p>
+        </div>
+
+        <div class="mission-card">
+            <h3>Our Vision</h3>
+            <p>
+                To become Nepal’s most reliable and customer‑friendly online marketplace,
+                offering a wide range of products with fast delivery and secure service.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="story">
+    <h2>Our Story</h2>
+    <p>
+        ShopNepal started with a simple idea — to make shopping easier for everyone.
+        From a small team with big dreams, we have grown into a trusted online store
+        serving thousands of customers across Nepal. Our journey continues as we expand
+        our services and improve our platform every day.
+    </p>
+</section>
+
+<!-- TEAM -->
+<section class="team">
+    <h2>Meet Our Team</h2>
+
+    <div class="team-grid">
+
+        <div class="team-card">
+            <img src="https://i.pinimg.com/736x/e1/f9/6d/e1f96d34085d38ceda7ab68de572fb3c.jpg" style="width:300px; height:450px; border:2px solid black; object-fit:cover; border-radius:10px;">
+>
+            <h3>Founder & CEO</h3>
+            <p>Leads the vision and growth of ShopNepal.</p>
+        </div>
+
+        <div class="team-card">
+            <img src="https://i.pinimg.com/736x/2b/2e/57/2b2e57bf12244904073a1b9fb8389e4f.jpg" style="width:300px; height:450px; border:2px solid black; object-fit:cover; border-radius:10px;">
+>
+            <h3>Operations Manager</h3>
+            <p>Ensures smooth delivery and customer satisfaction.</p>
+        </div>
+
+        <div class="team-card">
+            <img src="https://i.pinimg.com/736x/ec/ae/09/ecae092dc0bd40243c880735a4d05903.jpg" style="width:300px; height:450px; border:2px solid black; object-fit:cover; border-radius:10px;">
+>
+            <h3>Support Team</h3>
+            <p>Dedicated to helping customers every day.</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 ShopNepal — All Rights Reserved
+</footer>
+
+</body>
+</html>

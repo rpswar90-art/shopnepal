@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Online Shop</title>
+
+    <style>
+        body { 
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 15px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .search-cart {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-cart input {
+            padding: 8px 12px;
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            margin-right: 15px;
+        }
+
+        .banner {
+            background: linear-gradient(to right, #007bff, #00c6ff);
+            color: white;
+            padding: 80px 40px;
+            text-align: center;
+        }
+
+        .banner h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .banner p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .banner button {
+            padding: 12px 25px;
+            background: #fff;
+            color: #007bff;
+            border: none;
+            border-radius: 25px;
+            font-size: 18px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .products {
+            padding: 40px;
+        }
+
+        .products h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #888;
+            margin-left: 10px;
+        }
+
+        .discount {
+            color: #28a745;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+
+        .rating {
+            color: gold;
+            margin: 5px 0;
+        }
+
+        .card button {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .buy {
+            background: #007bff;
+            color: white;
+        }
+
+        .cart {
+            background: #28a745;
+            color: white;
+        }
+
+        .qty {
+            margin-top: 10px;
+        }
+
+        .availability {
+            margin-top: 5px;
+            font-weight: bold;
+            color: #28a745;
+        }
+
+        @media (max-width: 992px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">ShopNepal</div>
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="categories.html">Categories</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div class="search-cart">
+        <input type="text" placeholder="Search products...">
+        🛒
+    </div>
+</header>
+
+<div class="banner">
+    <h1>Big Festival Sale</h1>
+    <p>Up to 60% OFF on all products. Limited time offer.</p>
+    <button>Shop Now</button>
+</div>
+
+<section class="products">
+    <h2>Featured Products</h2>
+
+    <div class="grid">
+
+        <!-- PRODUCT 1 -->
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.t-1B9SbT16cAPkvU7j16EAHaKJ?w=136&h=186&c=7&r=0&o=7&pid=1.7&rm=3">
+            <h3>Wireless Headphones</h3>
+            <div class="price">Rs. 2500 <span class="old-price">Rs. 3500</span> <span class="discount">30% OFF</span></div>
+            <div class="rating">⭐⭐⭐⭐☆</div>
+            <p>High-quality sound with noise cancellation.</p>
+            <div class="qty">Qty: <input type="number" value="1" min="1"></div>
+            <div class="availability">In Stock</div>
+            <button class="buy">Buy Now</button>
+            <button class="cart">Add to Cart</button>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.fz-It5Za7IyF8cgZGnJTkAHaHa?w=162&h=150&c=6&r=0&o=7&pid=1.7&rm=3">
+            <h3>Smart Watch</h3>
+            <div class="price">Rs. 3200 <span class="old-price">Rs. 4500</span> <span class="discount">28% OFF</span></div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <p>Track fitness, heart rate, and notifications.</p>
+            <div class="qty">Qty: <input type="number" value="1"></div>
+            <div class="availability">In Stock</div>
+            <button class="buy">Buy Now</button>
+            <button class="cart">Add to Cart</button>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="card">
+            <img src="data:image/webp;base64,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">
+            <h3>Gaming Mouse</h3>
+            <div class="price">Rs. 1500 <span class="old-price">Rs. 2000</span> <span class="discount">25% OFF</span></div>
+            <div class="rating">⭐⭐⭐⭐☆</div>
+            <p>RGB lighting and high precision sensor.</p>
+            <div class="qty">Qty: <input type="number" value="1"></div>
+            <div class="availability">In Stock</div>
+            <button class="buy">Buy Now</button>
+            <button class="cart">Add to Cart</button>
+        </div>
+
+        <!-- PRODUCT 4 -->
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.ZjkSBbZaQGurzg03HlC-cgHaEK?w=324&h=182&c=7&r=0&o=7&pid=1.7&rm=3">
+            <h3>Bluetooth Speaker</h3>
+            <div class="price">Rs. 1800 <span class="old-price">Rs. 2500</span> <span class="discount">28% OFF</span></div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <p>Powerful bass and long battery life.</p>
+            <div class="qty">Qty: <input type="number" value="1"></div>
+            <div class="availability">In Stock</div>
+            <button class="buy">Buy Now</button>
+            <button class="cart">Add to Cart</button>
+        </div>
+
+        <!-- PRODUCT 5 -->
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.Y25hNcSUczjd6CORLG_nhQHaEK?w=283&h=187&c=7&r=0&o=7&pid=1.7&rm=3">
+            <h3>Laptop Bag</h3>
+            <div class="price">Rs. 1200 <span class="old-price">Rs. 1600</span> <span class="discount">25% OFF</span></div>
+            <div class="rating">⭐⭐⭐⭐☆</div>
+            <p>Durable and waterproof material.</p>
+            <div class="qty">Qty: <input type="number" value="1"></div>
+            <div class="availability">In Stock</div>
+            <button class="buy">Buy Now</button>
+            <button class="cart">Add to Cart</button>
+        </div>
+
+        <!-- PRODUCT 6 -->
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.Y25hNcSUczjd6CORLG_nhQHaEK?w=283&h=187&c=7&r=0&o=7&pid=1.7&rm=3">
+            <h3>Keyboard</h3>
+            <div class="price">Rs. 900 <span class="old-price">Rs. 1200</span> <span class="discount">20% OFF</span></div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <p>Soft keys and ergonomic design.</p>
+            <div class="qty">Qty: <input type="number" value="1"></div>
+            <div class="availability">In Stock</div>
+            <button class="buy">Buy Now</button>
+            <button class="cart">Add to Cart</button>
+        </div>
+
+        <!-- PRODUCT 7 -->
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.Y25hNcSUczjd6CORLG_nhQHaEK?w=283&h=187&c=7&r=0&o=7&pid=1.7&rm=3">
+            <h3>USB Flash Drive</h3>
+            <div class="price">Rs. 700 <span class="old-price">Rs. 900</span> <span class="discount">22% OFF</span></div>
+            <div class="rating">⭐⭐⭐⭐☆</div>
+            <p>32GB high-speed storage.</p>
+            <div class="qty">Qty: <input type="number" value="1"></div>
+            <div class="availability">In Stock</div>
+            <button class="buy">Buy Now</button>
+            <button class="cart">Add to Cart</button>
+        </div>
+
+        <!-- PRODUCT 8 -->
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.Y25hNcSUczjd6CORLG_nhQHaEK?w=283&h=187&c=7&r=0&o=7&pid=1.7&rm=3">
+            <h3>Phone Case</h3>
+            <div class="price">Rs. 350 <span class="old-price">Rs. 500</span> <span class="discount">30% OFF</span></div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <p>Shockproof and stylish design.</p>
+            <div class="qty">Qty: <input type="number" value="1"></div>
+            <div class="availability">In Stock</div>
+            <button class="buy">Buy Now</button>
+            <button class="cart">Add to Cart</button>
+        </div>
+
+        <!-- PRODUCT 9 -->
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.Y25hNcSUczjd6CORLG_nhQHaEK?w=283&h=187&c=7&r=0&o=7&pid=1.7&rm=3">
+            <h3>Power Bank</h3>
+            <div class="price">Rs. 1500 <span class="old-price">Rs. 2000</span> <span class="discount">25% OFF</span></div>
+            <div class="rating">⭐⭐⭐⭐☆</div>
+            <p>10000mAh fast charging.</p>
+            <div class="qty">Qty: <input type="number" value="1"></div>
+            <div class="availability">In Stock</div>
+            <button class="buy">Buy Now</button>
+            <button class="cart">Add to Cart</button>
+        </div>
+
+        <!-- PRODUCT 10 -->
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.Y25hNcSUczjd6CORLG_nhQHaEK?w=283&h=187&c=7&r=0&o=7&pid=1.7&rm=3">
+            <h3>Earbuds</h3>
+            <div class="price">Rs. 2200 <span class="old-price">Rs. 3000</span> <span class="discount">27% OFF</span></div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <p>Clear sound and long battery backup.</p>
+            <div class="qty">Qty: <input type="number" value="1"></div>
+            <div class="availability">In Stock</div>
+            <button class="buy">Buy Now</button>
+            <button class="cart">Add to Cart</button>
+        </div>
+
+        <!-- PRODUCT 11 -->
+        <div class="card">
+            <img src="https://th.bing.com/th/id/OIP.Y25hNcSUczjd6CORLG_nhQHaEK?w=283&h=187&c=7&r=0&o=7&pid=1.7&rm=3">
+            <h3>Tripod Stand</h3>
+            <div class="price">Rs. 850 <span class="old-price">Rs. 1100</span> <span class="discount">23% OFF</span></div>
+            <div class="rating">⭐⭐⭐⭐☆</div>
+            <p>Lightweight and adjustable height.</p>
+            <div class="qty">Qty: <input type="number" value="1"></div>
+            <div class="availability">In Stock</div>
+            <button class="buy">Buy Now</button>
+            <button class="cart">Add to Cart</button>
+        </div>
+
+        <!-- PRODUCT 12 -->
+        <div class="card">
+            <img src="https://i.pinimg.com/736x/24/15/f2/2415f2bc005af9dc01efb7e4ca48f3ce.jpg">
+            <h3>LED Lamp</h3>
+            <div class="price">Rs. 600 <span class="old-price">Rs. 800</span> <span class="discount">25% OFF</span></div>
+            <div class="rating">⭐⭐⭐⭐⭐</div>
+            <p>Energy-saving bright LED light.</p>
+            <div class="qty">Qty: <input type="number" value="1"></div>
+            <div class="availability">In Stock</div>
+            <button class="buy">Buy Now</button>
+            <button class="cart">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
